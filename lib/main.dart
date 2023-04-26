@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage> {
     'Grades'
   ];
 
-  static final LatLng _kMapCenter = LatLng(23.898674,121.5404075);
+  static final LatLng _kMapCenter = LatLng(23.898674, 121.5404075);
 
   static final CameraPosition _kInitialPosition =
       CameraPosition(target: _kMapCenter, zoom: 15.0, tilt: 0, bearing: 0);
@@ -85,15 +85,16 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('NDHUlite'),
+        backgroundColor: Color.fromARGB(255, 49, 86, 49),
       ),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
             DrawerHeader(
-              child: Text('Zenroy'),
+              child: Text('Student Name'),
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 25, 100, 19),
+                color: Color.fromARGB(255, 49, 86, 49),
               ),
             ),
             ListTile(
@@ -137,12 +138,10 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      body:
-      GoogleMap(
+      body: GoogleMap(
         initialCameraPosition: _kInitialPosition,
         onMapCreated: onMapCreated,
       ),
-      
     );
   }
 }
